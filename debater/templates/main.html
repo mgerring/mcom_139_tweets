@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<h1>Debate Tweets Analysis</h1>
+<div id="chart"></div>
+<form id="controls">
+	<select id="debate" name="debate">
+		<option value="debate_tweets">Debate 1</option>
+		<option value="debate_tweets_hofstra">Debate 2</option>
+		<option value="debate_tweets_tampa">Debate 3</option>
+	</select>
+	<div id="time_range" class="noUiSlider-container">
+		<input class="slider" id="begin" type="range" min="0" max="100" step="0" value="0" />
+		<input class="slider" id="end" type="range" min="0" max="100" step="0" value="0" />
+	</div>
+</form>
+{% endblock %}
+
+
+{% block pre-plugins %}
+<script src="{% get_static_prefix %}/js/vendor/underscore.min.js"></script>
+<script src="{% get_static_prefix %}/js/vendor/d3.v2.min.js"></script>
+<script src="{% get_static_prefix %}/js/vendor/d3.layout.cloud.js"></script>
+<script src="{% get_static_prefix %}/js/vendor/jquery.nouislider.min.js"></script>
+{% endblock %}

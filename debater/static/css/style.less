@@ -1,0 +1,120 @@
+@import url('less/normalize.less');
+@import url('less/grid.less');
+@import url('less/text.less');
+
+/* Site-specific styles */
+#chart {
+	width:960px;
+	height:500px;
+	margin:0 auto;
+	background:gainsboro;
+	position:relative;
+	margin-bottom:30px;
+	.axis path,
+	.axis line {
+	    fill: none;
+	    stroke: black;
+	    shape-rendering: crispEdges;
+	}
+	#xaxis {
+		position:absolute;
+		bottom:-30px;
+		left:0;
+	}
+	#yaxis {
+		position:absolute;
+		left:-40px;
+		top:0;
+	}
+	.tweet {
+		position:absolute;
+		width:1px;
+		height:1px;
+	}
+	.popup {
+		display:none;
+	}
+}
+#controls {
+	display: block;
+	width: 960px;
+	margin: 0 auto 50px;
+	#time_range {
+		display: block;
+		width: 960px;
+		margin: 0 auto;
+		.slider {
+			width:100%;
+		}
+		&.noUiSlider-container .slider {
+			display:none;
+		}
+	}
+}
+
+.noUiSlider-container {
+	width:					90%;
+	margin-left:			9px;
+	border:					1px solid #CCC;
+	height:					8px;
+	background:				#EEE;
+	-webkit-touch-callout:	none;
+}
+.noUi-midBar {
+	height:					100%;
+	z-index:				0;
+	background:				blue;
+	-webkit-touch-callout:	none;
+}
+.noUi-handle > div {
+	position:				absolute;
+	width:					16px;
+	height:					16px;
+	top:					-5px;
+	left:					-8px;
+	z-index: 				5;
+	border:					1px solid #CCC;
+	background:				#EEE;
+	border-radius:8px;
+}
+.noUi-handle > div:hover,
+.noUi-handle > div.noUi-activeHandle {
+	background:				#ACE;
+	border-color:			#369;
+}
+.disabled > .noUi-midBar {
+	background:				#999;
+}
+.disabled .noUi-handle > div {
+	border-color:			#CCC;
+	background:				#CCC;
+}
+#filter_years .slider {
+	.after, .before {
+		display:block;
+		margin-top:16px;
+		font-size:smaller;
+	}
+	.after {
+		.grid(6);
+	}
+	.before {
+		.grid(6);
+		.last;
+		text-align: right;
+	}
+}
+#born, #died {
+	height:75px;
+	width:100%;
+	margin-bottom:10px;
+}
+@media (-webkit-min-device-pixel-ratio:1.2),-moz-touch-enabled,(max-device-width:1024px){
+	.noUi-handle > div {
+		height:				32px;
+		width:				32px;
+		top:				-13px;
+		left:				-16px;
+	}
+}
+@import url('less/util.less');
