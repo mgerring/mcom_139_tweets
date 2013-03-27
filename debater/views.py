@@ -19,17 +19,18 @@ from nltk.stem.wordnet import WordNetLemmatizer
 import StringIO
 import csv
 
-connection = pymongo.Connection()
-db = connection.debatebot
-atnames = re.compile('(?<=^|(?<=[^a-zA-Z0-9-_\\.]))(@[A-Za-z]+[A-Za-z0-9]+)')
-hashtags = re.compile('(?<=^|(?<=[^a-zA-Z0-9-_\\.]))(#[A-Za-z]+[A-Za-z0-9]+)')
-links = "(^|[\n ])(([\w]+?://[\w\#$%&~.\-;:=,?@\[\]+]*)(/[\w\#$%&~/.\-;:=,?@\[\]+]*)?)"
-numbers = re.compile('(\d|[.,+])+')
-errant_rt = re.compile('(rt$)')
-#punct = re.compile('&amp|[!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~+]')
-#punct_no_hastags = '(&amp|[!"$%&\'()*+,-./:;<=>?[\\]^_`{|}~+]|[@#](?![A-Za-z]+[A-Za-z0-9]+))'
-#twitter = re.compile('(%s|%s)'%(links,punct_no_hastags))
-twitter = re.compile(links)
+def connection():
+	return pymongo.Connection()
+
+def db():
+	return connection().debatebot
+
+atnames 	= re.compile('(?<=^|(?<=[^a-zA-Z0-9-_\\.]))(@[A-Za-z]+[A-Za-z0-9]+)')
+hashtags 	= re.compile('(?<=^|(?<=[^a-zA-Z0-9-_\\.]))(#[A-Za-z]+[A-Za-z0-9]+)')
+numbers 	= re.compile('(\d|[.,+])+')
+errant_rt 	= re.compile('(rt$)')
+links 		= "(^|[\n ])(([\w]+?://[\w\#$%&~.\-;:=,?@\[\]+]*)(/[\w\#$%&~/.\-;:=,?@\[\]+]*)?)"
+twitter 	= re.compile(links)
 
 def home(request):
 	return render_to_response('main.html', context_instance=RequestContext(request) )
