@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^data/(?P<collection>\w+)/(?P<limit>\d+)$', 'debater.views.get', name='get_data'),
     url(r'^data/words/(?P<collection>\w+)/$', 'debater.views.words', name='get_words_bare'),
     url(r'^data/words/(?P<collection>\w+)/(?P<begin>\d+)/(?P<end>\d+)$', 'debater.views.words', name='get_words'),
+    url(r'^data/words/(?P<collection>\w+)/(?P<begin>\d+)/(?P<end>\d+)/csv$', 'debater.views.to_csv', name='get_words'),
     # url(r'^crum/', include('crum.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

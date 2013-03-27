@@ -4,17 +4,32 @@
 {% block body %}
 <h1>Debate Tweets Analysis</h1>
 <div id="chart"></div>
+<a href="#" id="print">Save image</a>
+<a href="#" id="download">Download</a>
 <form id="controls">
+
 	<select id="debate" name="debate">
 		<option value="debate_tweets">Debate 1</option>
 		<option value="debate_tweets_hofstra">Debate 2</option>
 		<option value="debate_tweets_tampa">Debate 3</option>
 	</select>
+
+	<select id="subject" name="subject">
+		<option value="0">Word Frequency</option>
+		<option value="1">Mentions</option>
+		<option value="2">Hashtags</option>
+		<option value="3">Obama vs. Romney</option>
+	</select>
+
 	<div id="time_range" class="noUiSlider-container">
+		<div id="double-slider"></div>
 		<input class="slider" id="begin" type="range" min="0" max="100" step="0" value="0" />
 		<input class="slider" id="end" type="range" min="0" max="100" step="0" value="0" />
+		<div id="begin_text">&nbsp;</div>
+		<div id="end_text">&nbsp;</div>
 	</div>
 </form>
+
 {% endblock %}
 
 

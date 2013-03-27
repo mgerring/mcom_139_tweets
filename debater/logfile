@@ -1421,3 +1421,1280 @@ Traceback (most recent call last):
   File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
     return_val['high'] = results[0][0][1]
 IndexError: list index out of range
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /data/words/debate_tweets/100/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /data/words/undefined/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 65, in words
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/undefined/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 65, in words
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/undefined/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 65, in words
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets/15/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets/15/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets/100/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets/100/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets/100/100
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1349326408/1349326408
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1349326408/1349346293
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1349326408/1349346293
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1349326408/1349346293
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1349326408/1349346293
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 92, in words
+    return_val['high'] = results[0][0][1]
+IndexError: list index out of range
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 19, in <module>
+    connection = pymongo.Connection()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/connection.py", line 178, in __init__
+    max_pool_size, document_class, tz_aware, _connect, **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 274, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158
+    final_fd[] = temp[0];
+             ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158
+    final_fd[] = temp[0]
+             ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 168
+    if ()
+        ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 158, in _word_and_bigram_fd
+    final_fd.append(temp[0])
+TypeError: 'NoneType' object is not subscriptable
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 160, in _word_and_bigram_fd
+    final_fd.append( ( temp[1][0], math.abs(temp[0][1] - temp[1][1]) ) )
+AttributeError: 'module' object has no attribute 'abs'
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 160
+    final_fd.[ temp[1][0] ] = ( ( temp[1][0], math.fabs(temp[0][1] - temp[1][1]) ) )
+             ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 160
+    final_fd.[ temp[1][0] ] = ( temp[1][0], math.fabs(temp[0][1] - temp[1][1]) )
+             ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 162, in _word_and_bigram_fd
+    final_fd = [value for key, value in final_fd]
+ValueError: too many values to unpack
+ERROR Internal Server Error: /data/words/debate_tweets_tampa/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 87, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 165, in _word_and_bigram_fd
+    return ( final_fd[:100], nltk.FreqDist(atname_fd).items(), nltk.FreqDist(hashtag_fd).items(), obama, romney)
+TypeError: unhashable type
+ERROR Internal Server Error: /data/debate_tweets/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 40, in get
+    data = [result for result in tweets]
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/cursor.py", line 800, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/cursor.py", line 762, in _refresh
+    limit, self.__id))
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/cursor.py", line 686, in __send_message
+    **kwargs)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 917, in _send_message_with_response
+    sock_info = self.__socket()
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/pymongo/mongo_client.py", line 672, in __socket
+    "%s %s" % (host_details, str(why)))
+AutoReconnect: could not connect to localhost:27017: [Errno 61] Connection refused
+ERROR Internal Server Error: /data/words/debate_tweets/0/1
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    word = word.strip('":.;?-,')
+UnboundLocalError: local variable 'word' referenced before assignment
+ERROR Internal Server Error: /data/words/debate_tweets/0/1
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    word = word.strip('":.;?-,')
+UnboundLocalError: local variable 'word' referenced before assignment
+ERROR Internal Server Error: /data/words/debate_tweets/
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    word = word.strip('":.;?-,')
+UnboundLocalError: local variable 'word' referenced before assignment
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    text = word.strip('":.;?-,')
+UnboundLocalError: local variable 'word' referenced before assignment
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/0/10
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    text = word.strip('":.;?-,')
+UnboundLocalError: local variable 'word' referenced before assignment
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/0/10
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 88, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 137, in _word_and_bigram_fd
+    text = _word_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 114, in _word_filter
+    stopset = stopset + ["you'll","1st","2nd"]
+UnboundLocalError: local variable 'stopset' referenced before assignment
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 113
+SyntaxError: Non-ASCII character '\xe2' in file /Users/beatpanda/dev/debater/debater/views.py on line 113, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 89, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 146, in _word_and_bigram_fd
+    text = _errant_rt_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 118, in _errant_rt_filter
+    return re.sub(errant_rt,text)
+TypeError: sub() takes at least 3 arguments (2 given)
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/0/10
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 89, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 146, in _word_and_bigram_fd
+    text = _errant_rt_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 118, in _errant_rt_filter
+    return re.sub(errant_rt,text)
+TypeError: sub() takes at least 3 arguments (2 given)
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 89, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 146, in _word_and_bigram_fd
+    text = _errant_rt_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 118, in _errant_rt_filter
+    return re.sub(errant_rt,text)
+TypeError: sub() takes at least 3 arguments (2 given)
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/0/10
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 89, in words
+    results = _word_and_bigram_fd([result for result in db[collection].find(filters).limit(2000)])
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 146, in _word_and_bigram_fd
+    text = _errant_rt_filter(text)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 118, in _errant_rt_filter
+    return re.sub(errant_rt,text)
+TypeError: sub() takes at least 3 arguments (2 given)
+ERROR Internal Server Error: /data/words/debate_tweets_hofstra/1350452942/1350475129
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 98, in words
+    return_json = json.dumps(return_val, default=json_util.default)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 201, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 264, in iterencode
+    return _iterencode(o, 0)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x98 in position 0: invalid start byte
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64
+    def get_the_words(collection = None, begin = 0, end = 0, limit = 100)
+                                                                        ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 65
+    def get_the_words(collection = None, begin = 0, end = 0, limit = 100)
+                                                                        ^
+SyntaxError: invalid syntax
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349351580/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 71, in csv
+    writer = csv.writer(outfile, dialect="excel-tab", doublequote=False, quotechar="'")
+AttributeError: 'function' object has no attribute 'writer'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349351580/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 71, in csv
+    writer = csv.writer(outfile, dialect="excel-tab", doublequote=False, quotechar="'")
+AttributeError: 'function' object has no attribute 'writer'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349351580/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 73, in to_csv
+    writer.writerow(val)
+Error: need to escape, but no escapechar set

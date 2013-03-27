@@ -1,13 +1,17 @@
 var tweetavis = {
 	wordcloud: {
 		tweets : "",
-		fill : d3.scale.category20(),
-		wordScale : d3.scale.log(),
-		timeScale : d3.scale.linear().range([0,100]),
 		layout : "",
 		vis : "",
 		svg : "",
 		collection : "",
+		fill : d3.scale.category20(),
+		wordScale : d3.scale.log().range([12,72]),
+		linearWordScale : d3.scale.linear().range([12,72]),
+		timeScale : d3.scale.linear().range([0,100]),
+		sliderEl : null,
+		initslider: false,
+		subject: 0,
 		init : function() {
 			this.svg = d3.select("#chart").append("svg")
 	    		.attr("width", 960)
@@ -18,26 +22,32 @@ var tweetavis = {
 				.rotate(0)
 				.font("Impact")
 				.fontSize(function(d) { return d.size; })
-				.on("end", $.proxy(this.draw, this));this.slider('#time_range', '#controls', this.tweets.min_time, this.tweets.max_time);
+				.on("end", $.proxy(this.draw, this));
 		},
-		getData : function(collection,begin,end) {
+		getData : function(url,collection) {
 			this.collection = collection;
 			$.getJSON(
-				'/data/words/'+collection+'/'+begin+'/'+end,
+				url,
 				$.proxy(function(result) {
 					this.tweets = result;
-					this.timeScale.domain([this.tweets.min_time, this.tweets.max_time]);
-					minmax = {min:this.tweets.min_time,max:this.tweets.max_time};
-					$("#time_range").find("#begin").attr(minmax);
-					$("#time_range").find("#end").attr(minmax);
-					this.generate();
+					this.timeScale.domain([this.tweets.min_time,this.tweets.max_time]);
+					$(window).trigger('tweetdataloaded');
 				}, this)
 			);
 		},
 		generate : function() {
-			this.wordScale.domain([this.tweets.low,this.tweets.high]).range([12,72]);
+			var subject = this.subject;
+			var count = _.map( this.tweets.words[subject], function(word){ return word[1] } );
+			var tweets_high = _.max( count );
+			var tweets_low = _.min( count );
+			if( subject == 3 ) {
+				var scale = this.linearWordScale;
+			} else {
+				var scale = this.wordScale;
+			}
+			scale.domain([tweets_low,tweets_high]);
 			this.layout.stop()
-				.words(this.tweets.words[0].map($.proxy(function(d) {
+				.words(this.tweets.words[subject].map($.proxy(function(d) {
 					return { text: d[0], size: this.wordScale(d[1]) };
 				},this )))
 				.start();
@@ -62,37 +72,70 @@ var tweetavis = {
 			text.exit()
 				.remove();
 		},
-		slider: function(el,form,start_time,stop_time,step) {
-			var that = this;
-			$(el).data('collection',this.collection).addClass('noUiSlider-container').noUiSlider('init',{	
+		toTime: function(time) {
+			return this.timeScale.invert(time);
+		},
+		toDate: function(time) {
+			return new Date( this.timeScale.invert(time) * 1000 ).toUTCString();
+		},
+		updateTime: function(el) {
+			el = $(el);
+			var values = el.find("#double-slider").noUiSlider('value');
+			el.find("#begin_text").text( this.toDate( values[0] ) );
+			el.find("#end_text").text( this.toDate( values[1] ) );
+			el.find("#begin").val( values[0] );
+			el.find("#end").val( values[1] );
+		},
+		initSlider: function(el,form) {
+			$(el).addClass('noUiSlider-container').noUiSlider('init',{	
 				handles : 2, 
 				connect : 'upper',
 				scale	: [0,100],
 				start	: [0,100],
-				end	: function() {
-					values = this.noUiSlider('value');
-					console.log(values);
-					$(el).find("#begin").val( that.timeScale.invert(values[0]) );
-					console.log( that.timeScale.invert(values[0]) );
-					$(el).find("#end").val( that.timeScale.invert(values[1]) );
-					console.log( that.timeScale.invert(values[1]) );
-					that.update(form,false);
-				}
+				end	: $.proxy(function() {
+					this.update(form,false);
+					this.updateTime(form);
+				},this),
+				change : $.proxy(function() {
+					this.updateTime(form);
+				},this)
 			});
+			this.updateTime(form);
+			return $(el);
 		},
-		update: function(el, reset) {
-			//el should be a form
+		scaleSize: function(newWidth) {
+			var el = $(this.svg[0][0]).clone()
+			return d3.select(el[0])
+				.attr("viewBox","0 0 960 500")
+				.attr("width",newWidth)
+				.attr("height",newWidth*(500/960))
+				.attr("preserveAspectRatio","xMinYMin")
+				.attr("version",'1.1')
+				.attr("xmlns","http://www.w3.org/2000/svg");
+				
+		},
+		toUrl: function(el,reset) {
 			el = $(el);
 			var debate = el.find('#debate').val();
-			if(reset) {
+			this.subject = el.find('#subject').val();
+			if( reset === true ) {
 				var begin = 0;
 				var end = 0;
 			} else {
 				var begin = el.find('#begin').val();
 				var end = el.find('#end').val();
+				begin = parseInt(this.toTime(begin));
+				end = parseInt(this.toTime(end));
 			}
-			this.getData(debate,begin,end);
+			return {collection:debate, url:'/data/words/'+debate+'/'+begin+'/'+end};
 		},
+		update: function(el, reset) {
+			var stuff = this.toUrl(el,reset);
+			this.getData( stuff['url'], stuff['collection'] );
+		},
+		getCsvLink: function(el,reset) {
+			return this.toUrl(el,reset)['url'] + '/csv';
+		}
 	}
 
 }
@@ -100,86 +143,203 @@ var tweetavis = {
 $(window).load(function(){
 	tweetavis.wordcloud.init();
 	tweetavis.wordcloud.update('#controls');
+	$(window).on('tweetdataloaded',function(e){
+		//console.log(e);
+		$('#download').attr('href',tweetavis.wordcloud.getCsvLink('#controls',false));
+		tweetavis.wordcloud.generate();
+		if(tweetavis.wordcloud.initslider === false){
+			tweetavis.wordcloud.initslider = tweetavis.wordcloud.initSlider('#double-slider','#controls');
+		}
+	});
 	$('select#debate').on('change',function(){
+		tweetavis.wordcloud.initslider.empty(); 
+		tweetavis.wordcloud.initslider = false;
 		tweetavis.wordcloud.update('#controls',true);
+	});
+	$('select#subject').on('change',function(){
+		tweetavis.wordcloud.subject = $(this).val();
+		tweetavis.wordcloud.generate();
+	});
+	$('#print').on('click',function(e){
+		e.preventDefault();
+		var el = $('<div>').html(tweetavis.wordcloud.scaleSize(3000)[0][0]);
+		$(this).off('click').text('Generating image...');
+		encode_to_canvas(el,'tutorial','3000');
 	});
 });
 
 
-var twutil = {
-	xscale: d3.time.scale(),
-	yscale: d3.scale.linear(),
-	xaxis: d3.svg.axis(),
-	yaxis: d3.svg.axis(),
-	setXScale: function() {
-		var dates = [this.getMinDate(tweets), this.getMaxDate(tweets)];
-		this.xscale.domain(dates);
-		this.xscale.range([0,960]);
-		return this;
-	},
-	setXAxis: function() {
-		this.xaxis.scale(this.xscale);
-		this.xaxis.ticks(d3.time.minutes, 30);
-		return this;
-	},
-	setYScale: function() {
-		var bounds = [this.getMaxCharCount(tweets), this.getMinCharCount(tweets)];
-		this.yscale.domain(bounds);
-		this.yscale.range([0,500]);
-		return this;
-	},
-	setYAxis: function() {
-		this.yaxis.scale(this.yscale);
-		this.yaxis.orient("left");
-		return this;
-	},
-	getMinDate: function(list) {
-		var tweet = _.min(list, function(item){ return item.created_at.$date });
-		return new Date(tweet.created_at.$date);
-	},
-	getMaxDate: function(list) {
-		var tweet = _.max(list, function(item){ return item.created_at.$date });
-		return new Date(tweet.created_at.$date);
-	},
-	getMinCharCount: function(list) {
-		var tweet = _.min(list, function(item){ return item.text.length });
-		return tweet.text.length;
-	},
-	getMaxCharCount: function(list) {
-		var tweet = _.max(list, function(item){ return item.text.length });
-		return tweet.text.length;
-	},
-	createXAxis: function(el) {
-		d3.select(el).append("svg")
-    		.attr("id", "xaxis")
-    		.attr("class", "axis")
-    		.attr("width", 960)
-    		.attr("height", 30)
-  			.append("g")
-    		.call(this.xaxis);
-    	return this;
-	},
-	createYAxis: function(el) {
-		d3.select(el).append("svg")
-    		.attr("id", "yaxis")
-    		.attr("class", "axis")
-    		.attr("width", 50)
-    		.attr("height", 500)
-			.append("g")
-    		.call(this.yaxis)
-    		.attr("transform", "translate(40,0)");
-    	return this;
-	},
-	plotCharCount: function(el) {
-		d3.select(el).selectAll("div")
-			.data(tweets)
-			.enter()
-			.append("div")
-				.style("background", "red")
-				.style("position","absolute")
-				.style("left", function(d){ return twutil.xscale( new Date(d.created_at.$date) )+"px" } )
-				.style("top", function(d){ return twutil.yscale( d.text.length )+"px" } )
-				.attr("class","tweet")
-				.html( function(d){ return '<p class="popup">'+d.text+'</p>' } );
+// FireFox's SVG renderer is broken. You can't scale an
+// SVG and then render it to the canvas. You have to regenerate
+// the SVG with D3 and then render it to the canvas.
+
+// Meanwhile, Chrome's canvas is broken — while you can scale
+// SVGs to the size of a building in Chrome, you can't draw them
+// on to a canvas, which means you can't export a raster image.
+
+// This was true as of March 13th of 2013.
+
+function encode_to_canvas(el,canvas,width){
+	// Add some critical information
+	$("svg").attr({ version: '1.1' , xmlns:"http://www.w3.org/2000/svg"});
+	var svg = $(el).clone();
+	var b64 = Base64.encode(svg.html());
+	var img = new Image;
+	var canvas = document.createElement('canvas');
+	canvas.setAttribute('width',width);
+	canvas.setAttribute('height',width*(500/960));
+	img.src = "data:image/svg+xml;base64,\n"+b64;
+	img.onload = function() {
+		var ctx = canvas.getContext('2d');
+		ctx.drawImage(img,0,0);
+		convert_canvas_to_image(canvas, $('#print'));
 	}
+}
+
+function convert_canvas_to_image(canvas, a) {
+	var ctx = canvas.getContext('2d');
+	a.attr('href',canvas.toDataURL("image/png")).text('Image is ready!');
+}
+
+/**
+*
+*  Base64 encode / decode
+*  http://www.webtoolkit.info/
+*
+**/
+ 
+var Base64 = {
+ 
+	// private property
+	_keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+ 
+	// public method for encoding
+	encode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = Base64._utf8_encode(input);
+ 
+		while (i < input.length) {
+ 
+			chr1 = input.charCodeAt(i++);
+			chr2 = input.charCodeAt(i++);
+			chr3 = input.charCodeAt(i++);
+ 
+			enc1 = chr1 >> 2;
+			enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+			enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+			enc4 = chr3 & 63;
+ 
+			if (isNaN(chr2)) {
+				enc3 = enc4 = 64;
+			} else if (isNaN(chr3)) {
+				enc4 = 64;
+			}
+ 
+			output = output +
+			this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) +
+			this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+ 
+		}
+ 
+		return output;
+	},
+ 
+	// public method for decoding
+	decode : function (input) {
+		var output = "";
+		var chr1, chr2, chr3;
+		var enc1, enc2, enc3, enc4;
+		var i = 0;
+ 
+		input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+ 
+		while (i < input.length) {
+ 
+			enc1 = this._keyStr.indexOf(input.charAt(i++));
+			enc2 = this._keyStr.indexOf(input.charAt(i++));
+			enc3 = this._keyStr.indexOf(input.charAt(i++));
+			enc4 = this._keyStr.indexOf(input.charAt(i++));
+ 
+			chr1 = (enc1 << 2) | (enc2 >> 4);
+			chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+			chr3 = ((enc3 & 3) << 6) | enc4;
+ 
+			output = output + String.fromCharCode(chr1);
+ 
+			if (enc3 != 64) {
+				output = output + String.fromCharCode(chr2);
+			}
+			if (enc4 != 64) {
+				output = output + String.fromCharCode(chr3);
+			}
+ 
+		}
+ 
+		output = Base64._utf8_decode(output);
+ 
+		return output;
+ 
+	},
+ 
+	// private method for UTF-8 encoding
+	_utf8_encode : function (string) {
+		string = string.replace(/\r\n/g,"\n");
+		var utftext = "";
+ 
+		for (var n = 0; n < string.length; n++) {
+ 
+			var c = string.charCodeAt(n);
+ 
+			if (c < 128) {
+				utftext += String.fromCharCode(c);
+			}
+			else if((c > 127) && (c < 2048)) {
+				utftext += String.fromCharCode((c >> 6) | 192);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+			else {
+				utftext += String.fromCharCode((c >> 12) | 224);
+				utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+				utftext += String.fromCharCode((c & 63) | 128);
+			}
+ 
+		}
+ 
+		return utftext;
+	},
+ 
+	// private method for UTF-8 decoding
+	_utf8_decode : function (utftext) {
+		var string = "";
+		var i = 0;
+		var c = c1 = c2 = 0;
+ 
+		while ( i < utftext.length ) {
+ 
+			c = utftext.charCodeAt(i);
+ 
+			if (c < 128) {
+				string += String.fromCharCode(c);
+				i++;
+			}
+			else if((c > 191) && (c < 224)) {
+				c2 = utftext.charCodeAt(i+1);
+				string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+				i += 2;
+			}
+			else {
+				c2 = utftext.charCodeAt(i+1);
+				c3 = utftext.charCodeAt(i+2);
+				string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+				i += 3;
+			}
+ 
+		}
+ 
+		return string;
+	}
+ 
 }
