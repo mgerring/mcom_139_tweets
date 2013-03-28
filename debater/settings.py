@@ -1,4 +1,3 @@
-# Django settings for repsf project.
 import sys, os
 
 DEBUG = False
@@ -180,6 +179,6 @@ except ImportError:
 
 if DEBUG:
     try:
-        from local_settings import *
+        from debug_settings import *
     except ImportError:
         pass
