@@ -7,7 +7,7 @@ var tweetavis = {
 		collection : "",
 		fill : d3.scale.category20(),
 		wordScale : d3.scale.log().range([12,72]),
-		linearWordScale : d3.scale.linear().range([12,72]),
+		barScale : d3.scale.linear().range([0,960]),
 		timeScale : d3.scale.linear().range([0,100]),
 		sliderEl : null,
 		initslider: false,
@@ -53,21 +53,32 @@ var tweetavis = {
 			var tweets_high = _.max( count );
 			var tweets_low = _.min( count );
 
+			console.log(this.tweets);
 			// display a different chart if we're looking at Romney vs Obama, because a wordcloud isn't useful.
 			if( subject == 3 ) {
-				var scale = this.linearWordScale;
+				this.barScale.domain([0, tweets_low+tweets_high]);
+				var mapFunc = $.proxy(function(d) {
+					return { text: d[0], size: this.barScale(d[1]), count: d[1] };
+				},this )
+				this.drawBars( this.tweets[subject].map( mapFunc ) );
 			} else {
-				var scale = this.wordScale;
-			}
-
-			scale.domain([tweets_low,tweets_high]);
-			this.layout.stop()
-				.words(this.tweets[subject].map($.proxy(function(d) {
+				this.wordScale.domain([tweets_low,tweets_high]);
+				var mapFunc = $.proxy(function(d) {
 					return { text: d[0], size: this.wordScale(d[1]) };
-				},this )))
-				.start();
+				},this )
+				this.layout.stop()
+					.words( this.tweets[subject].map( mapFunc ) )
+					.start();
+			}
 		},
 		draw : function(words) {
+			console.log(words);
+			if(this.subject == 3) {
+				this.drawBars(words);
+				return;
+			}
+			this.vis.selectAll("rect").remove();
+			this.vis.selectAll(".label").remove();
 			var text = this.vis.selectAll("text").data(words);
 			text.transition()
 				.text(function(d) { return d.text; })
@@ -86,6 +97,32 @@ var tweetavis = {
 				.text(function(d) { return d.text; });
 			text.exit()
 				.remove();
+		},
+		drawBars : function(words) {
+			this.vis.selectAll("text").remove();
+			var labels = this.vis.selectAll("text").data(words);
+			var bars = this.vis.selectAll("rect").data(words);
+			  bars.transition()
+			  	.duration(1000)
+			  	.attr("y", function(d, i) { return i * 45; } )
+			  	.attr("x", "-480")
+			    .attr("width", function(d){ return d.size })
+			    .attr("height", '40px');
+			  bars.enter().append("rect")
+			  	.attr("y", function(d, i) { return i * 45; } )
+			  	.attr("x", "-480")
+			    .attr("width", function(d){ return d.size })
+			    .attr("height", '40px')
+			    .attr("class", function(d){ return d.text });
+			  labels.enter().append("text")
+			  	.attr("y", function(d, i) { return (i * 45) + 22 } )
+			  	.attr("x", "-480")
+			  	.text(function(d){return d.text + " (" + d.count + ")"})
+			  	.attr("class", "label");
+			  labels
+			  	.attr("y", function(d, i) { return (i * 45) + 22 } )
+			  	.attr("x", "-480")
+			  	.text(function(d){return d.text + " (" + d.count + ")"})
 		},
 		toTime: function(time) {
 			return this.timeScale.invert(time);
