@@ -3,9 +3,12 @@ from datetime import datetime
 
 env.hosts = ['root@ummer.matthewgerring.com']
 
-def deploy(m="lazy ass developer didn't write a commit message at %s" % datetime.now().strftime('%x %X') ):
+def lazy_commit():
+	m="lazy ass developer didn't write a commit message at %s" % datetime.now().strftime('%x %X') 
 	local('git add -A')
 	local('git commit -m "%s"' % m)
+
+def deploy():
 	local('git push go master')
 	with cd('/sites/debater'):
 		run('git pull origin master')

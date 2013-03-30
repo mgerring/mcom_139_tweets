@@ -69,12 +69,20 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 img{vertical-align:middle;}
 fieldset{border:0;margin:0;padding:0;}
 textarea{resize:vertical;}
+body{max-width:980px;margin:0 auto;}
+h1{margin-left:10px;}
+article{padding:10px;-webkit-column-count:4;-moz-column-count:4;font-size:.9em;text-align:justify;}
+#downloads{margin-left:10px;height:50px;}#downloads a{background-color:blue;color:white;text-decoration:none;padding:5px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;position:relative;}#downloads a:hover{background-color:#6666ff;}
+#downloads a:active{top:1px;box-shadow:inset 0px 0px 2px rgba(0, 0, 0, 0.5);}
 #chart{width:960px;height:500px;margin:0 auto;background:gainsboro;position:relative;margin-bottom:30px;}#chart .axis path,#chart .axis line{fill:none;stroke:black;shape-rendering:crispEdges;}
 #chart #xaxis{position:absolute;bottom:-30px;left:0;}
 #chart #yaxis{position:absolute;left:-40px;top:0;}
 #chart .tweet{position:absolute;width:1px;height:1px;}
 #chart .popup{display:none;}
-#controls{display:block;width:960px;margin:0 auto 50px;}#controls #time_range{display:block;width:960px;margin:0 auto;}#controls #time_range .slider{width:100%;}
+rect.Obama{stroke:white;fill:steelblue;}
+rect.Romney{stroke:white;fill:red;}
+text.label{stroke:transparent;fill:white;font-family:'Helvetica Neue',Helvetica,Arial;font-size:1.3em;font-weight:200;}
+#controls{display:block;width:960px;margin:0 auto 50px;position:relative;}#controls #time_range{display:block;width:960px;margin:0 auto;}#controls #time_range .slider{width:100%;}
 #controls #time_range.noUiSlider-container .slider{display:none;}
 #controls #time_range #begin_text{position:absolute;left:0;}
 #controls #time_range #end_text{position:absolute;right:0;}
