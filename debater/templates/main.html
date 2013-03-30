@@ -2,16 +2,32 @@
 {% load static %}
 
 {% block body %}
-<h1>Debate Tweets Analysis</h1>
+<h1>2012 U.S. Presidential Debate Tweets Analysis</h1>
+<article id="blurb">
+	<p>This visualization examines twitter messages sent during the 2012 Presidential Debates between Mitt Romney and Barack Obama.</p>
+
+	<p>Tweets were gathered using the Twitter search API for the first two debates (University of Denver and Hofstra University) and the Twitter streaming API during the third. The code is available on Github:</p>
+
+	<p>Filters were applied to the corpus of tweets to surface significant words. "Stop words", or common English words with low information density, were removed, as well as hyperlinks. <code>@name</code> mentions and <code>#hashtags</code> were removed, as well as mentions of the candidate's names, and analyzed seperately. The remaining words were processed by the Python NLTK "lemmatizer", returning the <a href="http://en.wikipedia.org/wiki/Headword">Lemma</a>, allowing related words to be grouped for analysis.</p>
+
+	<p>The chart takes a list of the most common 100 words, hastags, or @name mentions for the given time period and sizes them according to a log scale for comparison.</p>
+
+	<p>Further improvements that could be undertaken include processing the word lists using TF-IDF weighting against a corpus of tweets using random English words as a search parameter, or pairing this visualization with video from the debates to provide context to the word cloud.</p>
+</article>
+
 <div id="chart"></div>
-<a href="#" id="print">Save image</a>
-<a href="#" id="download">Download</a>
+
+<div id="downloads">
+	<a href="#" id="print">Save Image</a>
+	<a href="#" id="download">Download Excel File (CSV)</a>
+</div>
+
 <form id="controls">
 
 	<select id="debate" name="debate">
-		<option value="debate_tweets">Debate 1</option>
-		<option value="debate_tweets_hofstra">Debate 2</option>
-		<option value="debate_tweets_tampa">Debate 3</option>
+		<option value="debate_denver">Univ. of Denver, 10/3/2012</option>
+		<option value="debate_hofstra">Hofstra (New York), 10/16/2012</option>
+		<option value="debate_lynn">Lynn (Boca Raton), 10/22/2012</option>
 	</select>
 
 	<select id="subject" name="subject">

@@ -2698,3 +2698,171 @@ Traceback (most recent call last):
   File "/Users/beatpanda/dev/debater/debater/views.py", line 73, in to_csv
     writer.writerow(val)
 Error: need to escape, but no escapechar set
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/0/0
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 64, in words
+    return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 102, in get_the_words
+    min_time, max_time = get_time_bounds(collection = collection)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 81, in get_time_bounds
+    min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
+AttributeError: 'function' object has no attribute 'tweet_meta'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 70, in to_csv
+    the_file = open(  os.path.join( STATIC_ROOT,'json',collection,'%d-%d.json' % (begin, end) ) )
+NameError: global name 'os' is not defined
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 71, in to_csv
+    the_file = open(  os.path.join( STATIC_ROOT,'json',collection,'%d-%d.json' % (begin, end) ) )
+NameError: global name 'STATIC_ROOT' is not defined
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( settings.STATIC_ROOT,'json',collection,'%d-%d.json' % (begin, end) ) )
+TypeError: %d format: a number is required, not unicode
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( settings.STATIC_ROOT,'json',collection,'%s-%s.json' % (begin, end) ) )
+IOError: [Errno 2] No such file or directory: u'json/debate_tweets/1349326408-1349338288.json'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( settings.STATIC_ROOT,'json',collection,'%s-%s.json' % (begin, end) ) )
+IOError: [Errno 2] No such file or directory: u'json/debate_tweets/1349326408-1349338288.json'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( settings.STATIC_ROOT,'json',collection,'%s-%s.json' % (begin, end) ) )
+IOError: [Errno 2] No such file or directory: u'json/debate_tweets/1349326408-1349338288.json'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( settings.PROJECT_ROOT,'static',json,collection,'%s-%s.json' % (begin, end) ) )
+  File "/Users/beatpanda/.virtualenvs/debater/bin/../lib/python2.7/posixpath.py", line 66, in join
+    if b.startswith('/'):
+AttributeError: 'module' object has no attribute 'startswith'
+ERROR Internal Server Error: /data/words/debate_tweets/1349326408/1349338288/csv
+Traceback (most recent call last):
+  File "/Users/beatpanda/.virtualenvs/debater/lib/python2.7/site-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/Users/beatpanda/dev/debater/debater/views.py", line 72, in to_csv
+    the_file = open(  os.path.join( 'static/json',collection,'%s-%s.json' % (begin, end) ) )
+IOError: [Errno 2] No such file or directory: u'static/json/debate_tweets/1349326408-1349338288.json'

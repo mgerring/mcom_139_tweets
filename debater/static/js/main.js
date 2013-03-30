@@ -12,6 +12,7 @@ var tweetavis = {
 		sliderEl : null,
 		initslider: false,
 		subject: 0,
+		tweet_meta: null,
 		init : function() {
 			this.svg = d3.select("#chart").append("svg")
 	    		.attr("width", 960)
@@ -24,30 +25,44 @@ var tweetavis = {
 				.fontSize(function(d) { return d.size; })
 				.on("end", $.proxy(this.draw, this));
 		},
-		getData : function(url,collection) {
+		getData : function(url,collection,reset) {
 			this.collection = collection;
+			this.tweet_meta = JSON.parse( $.ajax('/static/json/'+collection+'/'+collection+'_meta.json', {async:false} ).responseText );
+			if(reset) {
+				if(this.initslider) {
+					this.initslider.data()['api']['options']['scale'] = [0, this.tweet_meta.length-1];
+				}
+				var min_time = this.tweet_meta[0];
+				var max_time = this.tweet_meta[this.tweet_meta.length - 1];
+				url += '/'+min_time+'-'+max_time+'.json';
+			}
 			$.getJSON(
 				url,
 				$.proxy(function(result) {
 					this.tweets = result;
-					this.timeScale.domain([this.tweets.min_time,this.tweets.max_time]);
+					var min_time = this.tweet_meta[0]
+					var max_time = this.tweet_meta[this.tweet_meta.length - 1]
+					this.timeScale.domain([min_time,max_time]);
 					$(window).trigger('tweetdataloaded');
 				}, this)
 			);
 		},
 		generate : function() {
 			var subject = this.subject;
-			var count = _.map( this.tweets.words[subject], function(word){ return word[1] } );
+			var count = _.map( this.tweets[subject], function(word){ return word[1] } );
 			var tweets_high = _.max( count );
 			var tweets_low = _.min( count );
+
+			// display a different chart if we're looking at Romney vs Obama, because a wordcloud isn't useful.
 			if( subject == 3 ) {
 				var scale = this.linearWordScale;
 			} else {
 				var scale = this.wordScale;
 			}
+
 			scale.domain([tweets_low,tweets_high]);
 			this.layout.stop()
-				.words(this.tweets.words[subject].map($.proxy(function(d) {
+				.words(this.tweets[subject].map($.proxy(function(d) {
 					return { text: d[0], size: this.wordScale(d[1]) };
 				},this )))
 				.start();
@@ -76,7 +91,8 @@ var tweetavis = {
 			return this.timeScale.invert(time);
 		},
 		toDate: function(time) {
-			return new Date( this.timeScale.invert(time) * 1000 ).toUTCString();
+			//Why are we manually lopping of the string GMT? I dunno, why are you such a bitch?
+			return new Date( this.tweet_meta[time] * 1000 ).toUTCString().replace("GMT","PST");
 		},
 		updateTime: function(el) {
 			el = $(el);
@@ -90,8 +106,8 @@ var tweetavis = {
 			$(el).addClass('noUiSlider-container').noUiSlider('init',{	
 				handles : 2, 
 				connect : 'upper',
-				scale	: [0,100],
-				start	: [0,100],
+				scale	: [0, this.tweet_meta.length-1],
+				start	: [0, this.tweet_meta.length-1],
 				end	: $.proxy(function() {
 					this.update(form,false);
 					this.updateTime(form);
@@ -114,27 +130,31 @@ var tweetavis = {
 				.attr("xmlns","http://www.w3.org/2000/svg");
 				
 		},
-		toUrl: function(el,reset) {
+		toUrl: function(el, reset) {
 			el = $(el);
 			var debate = el.find('#debate').val();
 			this.subject = el.find('#subject').val();
-			if( reset === true ) {
-				var begin = 0;
-				var end = 0;
-			} else {
+			if( !reset ) {
 				var begin = el.find('#begin').val();
 				var end = el.find('#end').val();
-				begin = parseInt(this.toTime(begin));
-				end = parseInt(this.toTime(end));
+				begin = this.tweet_meta[begin];
+				end = this.tweet_meta[end];
+				return {collection:debate, url:'/static/json/'+debate+'/'+begin+'-'+end+'.json'};
 			}
-			return {collection:debate, url:'/data/words/'+debate+'/'+begin+'/'+end};
+			return {collection:debate, url:'/static/json/'+debate };
 		},
 		update: function(el, reset) {
 			var stuff = this.toUrl(el,reset);
-			this.getData( stuff['url'], stuff['collection'] );
+			this.getData( stuff['url'], stuff['collection'], reset );
 		},
 		getCsvLink: function(el,reset) {
-			return this.toUrl(el,reset)['url'] + '/csv';
+			el = $(el);
+			var debate = el.find('#debate').val();
+			var begin = el.find('#begin').val();
+			var end = el.find('#end').val();
+			begin = this.tweet_meta[begin];
+			end = this.tweet_meta[end];
+			return '/' + debate + '/' + begin + '/' + end + '/csv';
 		}
 	}
 
@@ -142,9 +162,8 @@ var tweetavis = {
 
 $(window).load(function(){
 	tweetavis.wordcloud.init();
-	tweetavis.wordcloud.update('#controls');
+	tweetavis.wordcloud.update('#controls',true);
 	$(window).on('tweetdataloaded',function(e){
-		//console.log(e);
 		$('#download').attr('href',tweetavis.wordcloud.getCsvLink('#controls',false));
 		tweetavis.wordcloud.generate();
 		if(tweetavis.wordcloud.initslider === false){
@@ -198,7 +217,12 @@ function encode_to_canvas(el,canvas,width){
 
 function convert_canvas_to_image(canvas, a) {
 	var ctx = canvas.getContext('2d');
-	a.attr('href',canvas.toDataURL("image/png")).text('Image is ready!');
+	try {
+		a.attr('href',canvas.toDataURL("image/png")).text('Image is ready!');
+	} catch(e) {
+		alert('Woops! As of March 30, 2013, downloading images from charts only works in Firefox.');
+		a.remove();
+	}
 }
 
 /**

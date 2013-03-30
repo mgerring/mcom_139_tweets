@@ -103,3 +103,11 @@ def aggregate_and_save(db, collection, timestamps, data):
 	results = aggregate(db, collection, timestamps, data)
 	save_json( collection, timestamps,  results)
 	return results
+
+def build_meta_json(collection):
+	c = pymongo.Connection().word_counts
+	d = c[collection].find()
+	f = [ e['timestamp'].strftime('%s') for e in d]
+	g = open('debater/static/json/%s/%s_meta.json' % (collection, collection), 'w')
+	g.write(json.dumps(f))
+	g.close()

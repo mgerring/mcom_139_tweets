@@ -18,6 +18,8 @@ import math
 from nltk.stem.wordnet import WordNetLemmatizer
 import StringIO
 import csv
+import os
+import settings
 
 def connection():
 	return pymongo.Connection()
@@ -66,15 +68,16 @@ def words(request, collection = None, begin = 0, end = 0, limit = 100):
 	return HttpResponse(return_json,mimetype='application/json')
 
 def to_csv(request, collection = None, begin = 0, end = 0, limit = 100):
-	return_val = get_the_words(collection = collection, begin = begin, end = end, limit = limit)
-	to_csv = return_val['words'][0] + return_val['words'][1] + return_val['words'][2] + return_val['words'][3]
+	the_file = open(  os.path.join( 'debater/static/json',collection,'%s-%s.json' % (begin, end) ) )
+	return_val = json.loads(the_file.read())
+	to_csv = return_val[0] + return_val[1] + return_val[2] + return_val[3]
 	outfile = StringIO.StringIO()
 	writer = csv.writer(outfile, dialect="excel")
 	for val in to_csv:
 		writer.writerow(val)
 	outfile.seek(0)
 	response = HttpResponse(outfile.read(),mimetype='text/csv')
-	response['Content-Disposition'] = 'attachment; filename=thing.csv'
+	response['Content-Disposition'] = 'attachment; filename=%s.csv' % collection
 	return response
 
 def get_time_bounds(collection = None):
