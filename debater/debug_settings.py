@@ -11,6 +11,6 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = '/static'
+STATIC_URL = '/static/'
 
 LIVEJS_URL = STATIC_URL+'/js/vendor/live.js' # url to live.js file
