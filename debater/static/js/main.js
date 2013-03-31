@@ -53,7 +53,6 @@ var tweetavis = {
 			var tweets_high = _.max( count );
 			var tweets_low = _.min( count );
 
-			console.log(this.tweets);
 			// display a different chart if we're looking at Romney vs Obama, because a wordcloud isn't useful.
 			if( subject == 3 ) {
 				this.barScale.domain([0, tweets_low+tweets_high]);
@@ -72,7 +71,6 @@ var tweetavis = {
 			}
 		},
 		draw : function(words) {
-			console.log(words);
 			if(this.subject == 3) {
 				this.drawBars(words);
 				return;
