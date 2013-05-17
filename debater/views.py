@@ -17,7 +17,7 @@ import itertools
 import math
 from nltk.stem.wordnet import WordNetLemmatizer
 import StringIO
-import csv
+import unicodecsv as csv
 import os
 import settings
 
@@ -72,13 +72,24 @@ def to_csv(request, collection = None, begin = 0, end = 0, limit = 100):
 	return_val = json.loads(the_file.read())
 	to_csv = return_val[0] + return_val[1] + return_val[2] + return_val[3]
 	outfile = StringIO.StringIO()
-	writer = csv.writer(outfile, dialect="excel")
+	writer = csv.writer(outfile, dialect="excel", encoding="utf-8")
 	for val in to_csv:
 		writer.writerow(val)
 	outfile.seek(0)
 	response = HttpResponse(outfile.read(),mimetype='text/csv')
-	response['Content-Disposition'] = 'attachment; filename=%s.csv' % collection
+	
+	response['Content-Disposition'] = 'attachment; filename=%s_%s.csv' % (collection, _to_timestring(begin,end))
 	return response
+
+def _to_formatted_time(timestamp):
+	# This is an ugly, stupid, evil hack to do the timezone calculations.
+	# PST (base timezone) is -8 GMT 
+	return datetime.fromtimestamp(int(timestamp) - (8 * 60 * 60 * 100)).strftime('%m-%d-%Y--%H:%M')
+
+def _to_timestring(a,b):
+	if a == b:
+		return 'full-debate'
+	return '%s--%s' % (_to_formatted_time(a), _to_formatted_time(b))
 
 def get_time_bounds(collection = None):
 	min_time = db.tweet_meta.find_one({'collection':collection,'key':'min_date'})['value']
