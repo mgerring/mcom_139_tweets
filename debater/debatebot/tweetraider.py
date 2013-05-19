@@ -9,10 +9,10 @@ from pymongo import Connection
 import time
 import json
 
-consumer_key="OND2d2LLquZO9NIWsH3BNA"
-consumer_secret = "KUq2qZLlVa1iQRlKzmI2gmB1aOTHuBlOMlivpg0vYs"
-access_token = "17762774-mRpVvooSFxabRaMfJGO3oMROrMPjxCCQnUG7TsPX0"
-access_secret= "8m7jUYh0sNDS5lBhzJlRpEIh0iUuLWBMd56WQvkS8"
+#consumer_key=
+#consumer_secret = 
+#access_token = 
+#access_secret= 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
 
